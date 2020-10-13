@@ -450,7 +450,7 @@
   },
   {
     "id": "bzm-hls",
-    "name": "HLS Sampler",
+    "name": "BlazeMeter - HLS Plugin",
     "description": "HLS protocol sampler, enabling testing for streaming applications",
     "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/HLSPlugin/master/docs/sampler.png",
     "helpUrl": "https://github.com/Blazemeter/HLSPlugin/blob/master/README.md",
@@ -550,12 +550,30 @@
         "depends": [
           "jmeter-http"
         ]
+      },
+      "3.0.3": {
+        "changes": "Patch fix master-slave tests & URL protocol recognition improved",
+        "downloadUrl": "https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/jmeter-bzm-hls-3.0.3.jar",
+        "libs": {
+          "hlsparserj>=1.0.1-c287e78": "https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/hlsparserj-c287e78.jar",
+          "mpd-parser>=release-0.8-jdk8": "https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/mpd-parser-0.8-jdk8.jar",
+          "jackson-core>=2.10.2" : "https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/jackson-core-2.10.2.jar",
+          "jackson-dataformat-xml>=2.10.2":"https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/jackson-dataformat-xml-2.10.2.jar",
+          "jackson-annotations>=2.10.2" : "https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/jackson-annotations-2.10.2.jar",
+          "jackson-databind>=2.10.2" : "https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/jackson-databind-2.10.2.jar",
+          "jackson-module-jaxb-annotations>=2.10.2":"https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/jackson-module-jaxb-annotations-2.10.2.jar",
+          "stax2-api>=4.2":"https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/stax2-api-4.2.jar",
+          "woodstox-core>=5.3.0":"https://github.com/Blazemeter/HLSPlugin/releases/download/v3.0.3/woodstox-core-5.3.0.jar"
+        },
+        "depends": [
+          "jmeter-http"
+        ]
       }
     }
   },
   {
     "id": "bzm-http2",
-    "name": "HTTP/2 Sampler",
+    "name": "BlazeMeter - HTTP/2 Plugin",
     "description": "HTTP/2 protocol sampler",
     "helpUrl": "https://github.com/Blazemeter/jmeter-http2-plugin/blob/master/README.md",
     "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/jmeter-http2-plugin/master/syncRequest.png",
@@ -641,23 +659,23 @@
           "jetty-util>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-util/9.4.9.v20180320/jetty-util-9.4.9.v20180320.jar"
         }
       },
-        "1.4": {
-          "changes": "Fixed serialization issue for JMeter distributed mode",
-          "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-bzm-http2/1.4/jmeter-bzm-http2-1.4.jar",
-          "depends": [
-            "jmeter-http"
-          ],
-          "libs": {
-            "http2-client>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-client/9.4.9.v20180320/http2-client-9.4.9.v20180320.jar",
-            "http2-common>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-common/9.4.9.v20180320/http2-common-9.4.9.v20180320.jar",
-            "http2-hpack>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-hpack/9.4.9.v20180320/http2-hpack-9.4.9.v20180320.jar",
-            "jetty-alpn-client>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-alpn-client/9.4.9.v20180320/jetty-alpn-client-9.4.9.v20180320.jar",
-            "jetty-alpn-openjdk8-client>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-alpn-openjdk8-client/9.4.9.v20180320/jetty-alpn-openjdk8-client-9.4.9.v20180320.jar",
-            "jetty-http>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-http/9.4.9.v20180320/jetty-http-9.4.9.v20180320.jar",
-            "jetty-io>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-io/9.4.9.v20180320/jetty-io-9.4.9.v20180320.jar",
-            "jetty-util>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-util/9.4.9.v20180320/jetty-util-9.4.9.v20180320.jar"
-          }
-        },
+      "1.4": {
+        "changes": "Fixed serialization issue for JMeter distributed mode",
+        "downloadUrl": "https://search.maven.org/remotecontent?filepath=com/blazemeter/jmeter-bzm-http2/1.4/jmeter-bzm-http2-1.4.jar",
+        "depends": [
+          "jmeter-http"
+        ],
+        "libs": {
+          "http2-client>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-client/9.4.9.v20180320/http2-client-9.4.9.v20180320.jar",
+          "http2-common>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-common/9.4.9.v20180320/http2-common-9.4.9.v20180320.jar",
+          "http2-hpack>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/http2/http2-hpack/9.4.9.v20180320/http2-hpack-9.4.9.v20180320.jar",
+          "jetty-alpn-client>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-alpn-client/9.4.9.v20180320/jetty-alpn-client-9.4.9.v20180320.jar",
+          "jetty-alpn-openjdk8-client>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-alpn-openjdk8-client/9.4.9.v20180320/jetty-alpn-openjdk8-client-9.4.9.v20180320.jar",
+          "jetty-http>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-http/9.4.9.v20180320/jetty-http-9.4.9.v20180320.jar",
+          "jetty-io>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-io/9.4.9.v20180320/jetty-io-9.4.9.v20180320.jar",
+          "jetty-util>=9.4.9.v20180320": "http://search.maven.org/remotecontent?filepath=org/eclipse/jetty/jetty-util/9.4.9.v20180320/jetty-util-9.4.9.v20180320.jar"
+        }
+      },
       "1.4.1": {
         "changes": "Fix issue handling http responses without body (like 204 status code)",
         "downloadUrl": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.4.1/jmeter-bzm-http2-1.4.1.jar",
@@ -691,16 +709,33 @@
           "jetty-io>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.5/jetty-io-9.4.26.v20200117.jar",
           "jetty-util>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.5/jetty-util-9.4.26.v20200117.jar"
         }
+      },
+      "1.6": {
+        "changes": "Added support for Gzip in response headers and added data frame to PUT method",
+        "downloadUrl": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/jmeter-bzm-http2-1.6.jar",
+        "depends": [
+          "jmeter-http"
+        ],
+        "libs": {
+          "http2-client>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/http2-client-9.4.26.v20200117.jar",
+          "http2-common>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/http2-common-9.4.26.v20200117.jar",
+          "http2-hpack>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/http2-hpack-9.4.26.v20200117.jar",
+          "jetty-alpn-client>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/jetty-alpn-client-9.4.26.v20200117.jar",
+          "jetty-alpn-openjdk8-client>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/jetty-alpn-openjdk8-client-9.4.26.v20200117.jar",
+          "jetty-http>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/jetty-http-9.4.26.v20200117.jar",
+          "jetty-io>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/jetty-io-9.4.26.v20200117.jar",
+          "jetty-util>=9.4.26.v20200117": "https://github.com/Blazemeter/jmeter-http2-plugin/releases/download/v1.6/jetty-util-9.4.26.v20200117.jar"
+        }
       }
     }
   },
   {
     "id": "bzm-rte",
-    "name": "RTE Protocol Support",
+    "name": "BlazeMeter - RTE Plugin",
     "description": "Support for RTE (remote terminal emulation), providing a recorder, sampler and config element to interact with remote terminal servers",
     "screenshotUrl": "https://raw.githubusercontent.com/Blazemeter/RTEPlugin/master/docs/recorder/recorder-panel.png",
     "helpUrl": "https://github.com/Blazemeter/RTEPlugin/blob/master/README.md",
-    "vendor": "BlazeMeter.com",
+    "vendor": "BlazeMeter",
     "markerClass": "com.blazemeter.jmeter.rte.sampler.RTESampler",
     "componentClasses": [
       "com.blazemeter.jmeter.rte.sampler.Inputs",
@@ -815,16 +850,25 @@
           "dm3270-lib>=0.12.3": "https://github.com/Blazemeter/RTEPlugin/releases/download/v3.0.1/dm3270-lib-0.12.3.jar",
           "jVT220>=1.3": "https://github.com/Blazemeter/RTEPlugin/releases/download/v3.0.1/jVT220-1.3.jar"
         }
+      },
+      "3.1": {
+        "changes": "Send attention key to a determined position, and some bug fix!",
+        "downloadUrl": "https://github.com/Blazemeter/RTEPlugin/releases/download/v3.1/jmeter-bzm-rte-3.1.jar",
+        "libs": {
+          "xtn5250>=3.2.1": "https://github.com/Blazemeter/RTEPlugin/releases/download/v3.1/xtn5250-3.2.2.jar",
+          "dm3270-lib>=0.12.3": "https://github.com/Blazemeter/RTEPlugin/releases/download/v3.1/dm3270-lib-0.12.3.2.jar",
+          "jVT220>=1.3": "https://github.com/Blazemeter/RTEPlugin/releases/download/v3.1/jVT220-1.3.1.jar"
+        }
       }
     }
   },
   {
     "id": "bzm-siebel",
-    "name": "Correlation Recorder",
+    "name": "BlazeMeter - Correlation Recorder Plugin",
     "description": "Correlation Recorder provides auto-correlation of variables at recording time",
     "screenshotUrl": "https://github.com/Blazemeter/CorrelationRecorder/blob/master/docs/template-elements-panel.png",
     "helpUrl": "https://github.com/Blazemeter/CorrelationRecorder/blob/master/README.md",
-    "vendor": "BlazeMeter.com",
+    "vendor": "BlazeMeter",
     "markerClass": "com.blazemeter.jmeter.correlation.CorrelationProxyControl",
     "componentClasses": [
       "com.blazemeter.jmeter.correlation.CorrelationProxyControl",
@@ -840,7 +884,6 @@
         "changes": "Siebel Plugin has evolved into Correlation Recorder with lots of new features. Please check documentation to learn about all the new goodies!",
         "downloadUrl": "https://github.com/Blazemeter/CorrelationRecorder/releases/download/v1.0/jmeter-bzm-correlation-recorder-1.0.jar",
         "libs": {
-          "swingx-all>=1.6.5.1": "https://github.com/Blazemeter/CorrelationRecorder/releases/download/v1.0/swingx-all-1.6.5-1.jar",
           "jackson-dataformat-xml>=2.10.2":"https://github.com/Blazemeter/CorrelationRecorder/releases/download/v1.0/jackson-dataformat-xml-2.10.2.jar",
           "jackson-annotations>=2.10.2" : "https://github.com/Blazemeter/CorrelationRecorder/releases/download/v1.0/jackson-annotations-2.10.2.jar",
           "jackson-databind>=2.10.2" : "https://github.com/Blazemeter/CorrelationRecorder/releases/download/v1.0/jackson-databind-2.10.2.jar",
@@ -858,7 +901,7 @@
     "helpUrl": "https://github.com/JoseLuisSR/mqmeter",
     "vendor": "JoseLuisSR",
     "markerClass": "co.signal.mqmeter.MQClientSampler",
-	"componentClasses": [
+    "componentClasses": [
       "co.signal.mqmeter.MQPublishSampler",
       "co.signal.mqmeter.MQClientSampler"
     ],
@@ -873,26 +916,26 @@
   },
   {
     "id": "bzm-jmeter-citrix-plugin",
-    "name": "Blazemeter JMeter Citrix plugin",
-    "description": "Plugin which provides the ability to load tests Citrix exposed applications with Apache JMeter",
+    "name": "BlazeMeter - Citrix Plugin",
+    "description": "Support for Citrix protocol (only available for Microsoft Windows)",
     "screenshotUrl": "https://github.com/Blazemeter/CitrixPlugin/raw/master/citrix-jmeter/plugin-metadata/presentationScreenshot.png",
     "helpUrl": "https://github.com/Blazemeter/CitrixPlugin/blob/master/README.md",
-    "vendor": "Blazemeter.com",
+    "vendor": "BlazeMeter",
     "markerClass": "com.blazemeter.jmeter.citrix.recorder.gui.CitrixRecorderGUI",
     "componentClasses": [
       "com.blazemeter.jmeter.citrix.assertion.CitrixAssertion",
       "com.blazemeter.jmeter.citrix.assertion.gui.CitrixAssertionGui",
       "com.blazemeter.jmeter.citrix.assertion.CitrixSessionAssertion",
-	  "com.blazemeter.jmeter.citrix.assertion.gui.CitrixSessionAssertionGui",
-	  "com.blazemeter.jmeter.citrix.gui.CitrixResultRenderer",
-	  "com.blazemeter.jmeter.citrix.listener.CitrixIcaFileSaver",
-	  "com.blazemeter.jmeter.citrix.listener.gui.CitrixIcaFileSaverGui",
-	  "com.blazemeter.jmeter.citrix.recorder.CitrixRecorder",
-	  "com.blazemeter.jmeter.citrix.recorder.gui.CitrixRecorderGUI",
-	  "com.blazemeter.jmeter.citrix.sampler.StartApplicationSampler",
-	  "com.blazemeter.jmeter.citrix.sampler.gui.StartApplicationSamplerGUI",
+      "com.blazemeter.jmeter.citrix.assertion.gui.CitrixSessionAssertionGui",
+      "com.blazemeter.jmeter.citrix.gui.CitrixResultRenderer",
+      "com.blazemeter.jmeter.citrix.listener.CitrixIcaFileSaver",
+      "com.blazemeter.jmeter.citrix.listener.gui.CitrixIcaFileSaverGui",
+      "com.blazemeter.jmeter.citrix.recorder.CitrixRecorder",
+      "com.blazemeter.jmeter.citrix.recorder.gui.CitrixRecorderGUI",
+      "com.blazemeter.jmeter.citrix.sampler.StartApplicationSampler",
+      "com.blazemeter.jmeter.citrix.sampler.gui.StartApplicationSamplerGUI",
       "com.blazemeter.jmeter.citrix.sampler.InteractionSampler",
-	  "com.blazemeter.jmeter.citrix.sampler.gui.CitrixSamplerGUI"
+      "com.blazemeter.jmeter.citrix.sampler.gui.CitrixSamplerGUI"
     ],
     "versions": {
       "0.5.5": {
